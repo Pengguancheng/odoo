@@ -5,7 +5,7 @@ class setting_aid_tax(models.Model):
     _name = 'setting.aid.tax'
     #基本資料
     pyrecedcap = fields.Integer(string="上年度已收資本")
-    tyrecedcap = fields.Integer(string="本年度已收資本")  #此欄位格式需要修改
+    tyrecedcap = fields.Integer(string="本年度已收資本", compute="_get_tyrecedcap", readonly=True)
     divintratio = fields.Float(string="股息、年息比率%")
     cashcapincre = fields.Integer(string="現金增資")
     hrcapincre = fields.Integer(string="行使認股權轉增資")
@@ -32,5 +32,7 @@ class setting_aid_tax(models.Model):
     incapapnum = fields.Char(string="核准文號")  #增資緩課核備資料
     incapestfshday = fields.Date(string="預計完成日")  #增資緩課核備資料
 
-
+    @api.onchange('pyrecedcap')
+    def _get_tyrecedcap(self):
+        self.tyrecedcap = self.pyrecedcap
 

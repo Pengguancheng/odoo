@@ -1,138 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <act_window id="setting_aid_company"
-                name="記帳客戶維護"
-                res_model="setting.aid.company"
-                domain="[('company','=','123')]"
-                view_mode="form"/>
-    <record id="setting_aid_company_form" model="ir.ui.view">
-        <field name="name">記帳客戶維護</field>
-        <field name="model">setting.aid.company</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <notebook colspan="8">
-                        <page string="基本資料">
-                            <h1>基本資料</h1>
-                            <group col="4">
-                                <group colspan="4" col="4" string="公司">
-                                    <field name="company"/>
-                                    <field name="companyname"/>
-                                    <field name="companysname"/>
-                                </group>
-                                <field name="fox"/>
-                                <field name="tele"/>
-                                <field name="address"/>
-                                <field name="caddress"/>
-                                <field name="taxid"/>
-                                <field name="uniteid"/>
-                                <group colspan="4" col="4" string="負責人">
-                                    <field name="principal"/>
-                                    <field name="principaladdress"/>
-                                    <field name="principalbirth"/>
-                                    <field name="principaltele"/>
-                                    <field name="personid"/>
-                                    <field name="personidtag"/>
-                                </group>
-                                <group colspan="4" col="4" string="其它">
-                                    <field name="cpersonname"/>
-                                    <field name="cpersontele"/>
-                                    <field name="accountstart"/>
-                                    <field name="startday"/>
-                                    <field name="enddate"/>
-                                    <field name="datayear"/>
-                                    <field name="accountsource"/>
-                                    <group colspan="4" col="4" >
-                                        <field name="collectionid"/>
-                                        <field name="collectiontele"/>
-                                    </group>
-                                    <field name="saledutyfreestart" />
-                                </group>
-                            </group>
-                        </page>
-                        <page string="相關設定">
-                            <h1>相關設定</h1>
-                            <group col="6">
-                                <field name="decimallen"/>
-                                <field name="accountlen"/>
-                                <field name="buysellonelen"/>
-                                <field name="buysellonedecimallen"/>
-                                <field name="buysellnumlen"/>
-                                <field name="buysellquantitylen"/>
-                                <field name="buysellquantitydecimallen"/>
-                            </group>
-                            <group col="6">
-                                <field name="subjectnamelen"/>
-                                <field name="materialnamelen"/>
-                                <field name="constructionsitenamelen"/>
-                                <field name="subjectlen"/>
-                                <field name="standardlen"/>
-                                <field name="datedisplay"/>
-                            </group>
-                            <group col="4" string="房屋稅籍">
-                                <field name="housetaxcity"/>
-                                <field name="housetaxtown"/>
-                                <field name="housetaxvillage"/>
-                                <field name="housetaxnum"/>
-                            </group>
-                            <group col="4" string="管理代號">
-                                <field name="managecity"/>
-                                <field name="managecollection"/>
-                                <field name="managetown"/>
-                                <field name="manageservicearea"/>
-                            </group>
-                            <group col="2">
-                                <field name="accountreportfooter"/>
-                                <field name="buysellreportfooter"/>
-                                <field name="summonsreportfooter"/>
-                                <field name="companyemail"/>
-                            </group>
-                        </page>
-                        <page string="結算設定">
-                            <h1>結算設定</h1>
-                            <group col="4">
-                                <field name="businessclass"/>
-                                <field name="accountp"/>
-                                <field name="businesschexplain"/>
-                                <field name="accountsignp"/>
-                                <field name="groupclass"/>
-                                <field name="accountcost"/>
-                                <field name="transactdate"/>
-                            </group>
-                            <group col="4">
-                                <field name="declaremathod"/>
-                                <field name="undertakep"/>
-                                <field name="declareclass"/>
-                                <field name="endmediadeclare"/>
-                                <field name="standerdid"/>
-                                <field name="business"/>
-                                <field name="classsite"/>
-                            </group>
-                            <group col="4" string="比率設定">
-                                <field name="estimatedoperatingcostrate"/>
-                                <field name="industrystandardcostrate"/>
-                                <field name="estimatedoperatingexpensesrate"/>
-                                <field name="industrystandardexpensesrate"/>
-                            </group>
-                        </page>
-                        <page string="備註說明">
-                            <h1>備註說明</h1>
-                            <group col="4">
-                                <field name="companyread" readonly="1"/>
-                                <field name="companyname"/>
-                                <field name="remarktag" colspan="4"/>
-                            </group>
-                        </page>
-                    </notebook>
-                </sheet>
+    <data>
 
-            </form>
-        </field>
-    </record>
-    <!--<data>-->
+        <record id="setting_aid_company" model="ir.actions.act_window">
+            <field name="name">記帳客戶維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.aid.company</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <record id="setting_aid_company_form" model="ir.ui.view">
+            <field name="name">記帳客戶維護</field>
+            <field name="model">setting.aid.company</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Apply" type="object" name="" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="" class="oe_link"/>
+                    </header>
+                    <sheet>
+                        <notebook colspan="8">
+                            <page string="基本資料">
+                                <h1>基本資料</h1>
+                                <group col="4">
+                                    <group colspan="4" col="4" string="公司">
+                                        <field name="company"/>
+                                        <field name="companyname"/>
+                                        <field name="companysname"/>
+                                    </group>
+                                    <field name="fox"/>
+                                    <field name="tele"/>
+                                    <field name="address"/>
+                                    <field name="caddress"/>
+                                    <field name="taxid"/>
+                                    <field name="uniteid"/>
+                                    <group colspan="4" col="4" string="負責人">
+                                        <field name="principal"/>
+                                        <field name="principaladdress"/>
+                                        <field name="principalbirth"/>
+                                        <field name="principaltele"/>
+                                        <field name="personid"/>
+                                        <field name="personidtag"/>
+                                    </group>
+                                    <group colspan="4" col="4" string="其它">
+                                        <field name="cpersonname"/>
+                                        <field name="cpersontele"/>
+                                        <field name="accountstart"/>
+                                        <field name="startday"/>
+                                        <field name="enddate"/>
+                                        <field name="datayear"/>
+                                        <field name="accountsource"/>
+                                        <group colspan="4" col="4">
+                                            <field name="collectionid"/>
+                                            <field name="collectiontele"/>
+                                        </group>
+                                        <field name="saledutyfreestart"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="相關設定">
+                                <h1>相關設定</h1>
+                                <group col="6">
+                                    <field name="decimallen"/>
+                                    <field name="accountlen"/>
+                                    <field name="buysellonelen"/>
+                                    <field name="buysellonedecimallen"/>
+                                    <field name="buysellnumlen"/>
+                                    <field name="buysellquantitylen"/>
+                                    <field name="buysellquantitydecimallen"/>
+                                </group>
+                                <group col="6">
+                                    <field name="subjectnamelen"/>
+                                    <field name="materialnamelen"/>
+                                    <field name="constructionsitenamelen"/>
+                                    <field name="subjectlen"/>
+                                    <field name="standardlen"/>
+                                    <field name="datedisplay"/>
+                                </group>
+                                <group col="4" string="房屋稅籍">
+                                    <field name="housetaxcity"/>
+                                    <field name="housetaxtown"/>
+                                    <field name="housetaxvillage"/>
+                                    <field name="housetaxnum"/>
+                                </group>
+                                <group col="4" string="管理代號">
+                                    <field name="managecity"/>
+                                    <field name="managecollection"/>
+                                    <field name="managetown"/>
+                                    <field name="manageservicearea"/>
+                                </group>
+                                <group col="2">
+                                    <field name="accountreportfooter"/>
+                                    <field name="buysellreportfooter"/>
+                                    <field name="summonsreportfooter"/>
+                                    <field name="companyemail"/>
+                                </group>
+                            </page>
+                            <page string="結算設定">
+                                <h1>結算設定</h1>
+                                <group col="4">
+                                    <field name="businessclass"/>
+                                    <field name="accountp"/>
+                                    <field name="businesschexplain"/>
+                                    <field name="accountsignp"/>
+                                    <field name="groupclass"/>
+                                    <field name="accountcost"/>
+                                    <field name="transactdate"/>
+                                </group>
+                                <group col="4">
+                                    <field name="declaremathod"/>
+                                    <field name="undertakep"/>
+                                    <field name="declareclass"/>
+                                    <field name="endmediadeclare"/>
+                                    <field name="standerdid"/>
+                                    <field name="business"/>
+                                    <field name="classsite"/>
+                                </group>
+                                <group col="4" string="比率設定">
+                                    <field name="estimatedoperatingcostrate"/>
+                                    <field name="industrystandardcostrate"/>
+                                    <field name="estimatedoperatingexpensesrate"/>
+                                    <field name="industrystandardexpensesrate"/>
+                                </group>
+                            </page>
+                            <page string="備註說明">
+                                <h1>備註說明</h1>
+                                <group col="4">
+                                    <field name="companyread" readonly="1"/>
+                                    <field name="companyname"/>
+                                    <field name="remarktag" colspan="4"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <!--<data>-->
         <!--<menuitem id="project_accounting" name="Project_Accounting" sequence="1"></menuitem>-->
         <!--<menuitem id="paccounting_setting" name="共同管理" parent="project_accounting"></menuitem>-->
         <!--<menuitem id="paccounting_serring_billingcustomerset" name="計帳客戶維護" parent="paccounting_setting"-->
-                  <!--action="paccounting_main"></menuitem>-->
-    <!--</data>-->
+        <!--action="paccounting_main"></menuitem>-->
+        <!--</data>-->
+    </data>
 </openerp>

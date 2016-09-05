@@ -4,7 +4,6 @@
                 name="稅報資料維護"
                 res_model="setting.aid.tax"
                 view_mode="form"/>
-
     <record id="setting_aid_tax_form" model="ir.ui.view">
         <field name="name">setting_aid_tax_form</field>
         <field name="model">setting.aid.tax</field>
