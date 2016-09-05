@@ -4,10 +4,9 @@
         <menuitem id="setting" name="共同管理" sequence="1"/>
         <menuitem id="setting_aid" name="輔助設定" parent="setting"/>
             <menuitem id="setting_aid_systemm" name="系統設定" parent="setting_aid"
-                  action="setting_aid_system"/>
+                  action="setting_aid_system" sequence="1"/>
             <menuitem id="setting_aid_companym" name="公司基本維護" parent="setting_aid"
                   action="setting_aid_company"/>
-
             <!--<menuitem id="setting_aid_tax" name="稅報資料維護" parent="setting_aid"-->
                   <!--action="setting_customer"></menuitem>-->
             <!--<menuitem id="setting_aid_supply" name="供應商維護" parent="setting_aid"-->

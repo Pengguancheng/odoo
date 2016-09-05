@@ -3,9 +3,10 @@
     <act_window id="setting_aid_company"
                 name="記帳客戶維護"
                 res_model="setting.aid.company"
+                domain="[('company','=','123')]"
                 view_mode="form"/>
     <record id="setting_aid_company_form" model="ir.ui.view">
-        <field name="name">setting_aid_company_form</field>
+        <field name="name">記帳客戶維護</field>
         <field name="model">setting.aid.company</field>
         <field name="arch" type="xml">
             <form>
@@ -117,7 +118,7 @@
                         <page string="備註說明">
                             <h1>備註說明</h1>
                             <group col="4">
-                                <field name="company" readonly="1"/>
+                                <field name="companyread" readonly="1"/>
                                 <field name="companyname"/>
                                 <field name="remarktag" colspan="4"/>
                             </group>

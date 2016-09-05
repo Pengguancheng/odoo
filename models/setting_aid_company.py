@@ -3,7 +3,24 @@ from openerp import models, fields, api
 
 class setting_aid_customer(models.Model):
     _name = 'setting.aid.company'
+    _inherit = 'res.config.settings'
+
+    @api.one
+    @api.depends('company_id')
+    def _get_currency_id(self):
+        self.currency_id = self.company_id.currency_id
+
+    @api.one
+    def _set_currency_id(self):
+        if self.currency_id != self.company_id.currency_id:
+            self.company_id.currency_id = self.currency_id
     #基本資料
+    company_id = fields.Many2one('res.company', string='Company', required=True,
+        default=lambda self: self.env.user.company_id)
+    has_default_company = fields.Boolean(readonly=True,
+        default=lambda self: self._default_has_default_company())
+    currency_id = fields.Many2one('res.currency', compute='_get_currency_id', inverse='_set_currency_id', required=True,
+        string='Default company currency', help="Main currency of the company.")
     company =fields.Char(string="公司代號")
     companyname = fields.Char(string="公司名稱")
     companysname = fields.Char(string="公司簡稱")
@@ -78,3 +95,12 @@ class setting_aid_customer(models.Model):
     industrystandardexpensesrate = fields.Integer('同業標準費用率')
     #備註說明
     remarktag = fields.Html('備註說明')
+    companyread = fields.Char(' ', compute="_onchange_company")
+
+    @api.onchange('company')
+    def _onchange_company(self):
+        self.companyread = self.company
+    @api.model
+    def _default_has_default_company(self):
+        count = self.env['res.company'].search_count([])
+        return bool(count == 1)
