@@ -15,17 +15,10 @@
                         <page string="其他、營業稅">
                             <h1>其他、營業稅</h1>
                             <group col="6" string="其他科目">
-                                <table>
-                                    <tr>
-                                        <td><field name="cash"/></td>
-                                        <td><field name="reciecredit"/></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-
+                                <field name="cash"/>
                                 <field name="recietick"/>
                                 <field name="paytick"/>
-
+                                <field name="reciecredit"/>
                                 <field name="paycredit"/>
                                 <field name="inctaxam"/>
                                 <field name="selltaxam"/>
