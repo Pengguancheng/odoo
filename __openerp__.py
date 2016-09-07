@@ -16,7 +16,8 @@
                 "views/setting_aid_system.xml",
                 "views/setting_aid_tax.xml",
                 "views/setting_aid_supply.xml",
-                "views/setting_aid_relate.xml"
+                "views/setting_aid_relate.xml",
+                "views/setting_aid_shareclass.xml"
             ],
     'demo': [],
     'application': True,
