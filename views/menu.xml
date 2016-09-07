@@ -13,8 +13,8 @@
                   action="setting_aid_supply"></menuitem>
             <menuitem id="setting_aid_relatem" name="關聯科目設定" parent="setting_aid"
                   action="setting_aid_relate"></menuitem>
-            <!--<menuitem id="setting_aid_shareclass" name="共用分錄類別維護" parent="setting_aid"-->
-                  <!--action="setting_customer"></menuitem>-->
+            <menuitem id="setting_aid_shareclassm" name="共用分錄類別維護" parent="setting_aid"
+                  action="setting_aid_shareclass"></menuitem>
             <!--<menuitem id="setting_aid_accountperson" name="帳簿處理員維護" parent="setting_aid"-->
                   <!--action="setting_customer"></menuitem>-->
             <!--<menuitem id="setting_aid_engineering" name="工程維護" parent="setting_aid"-->
