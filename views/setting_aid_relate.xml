@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_aid_relate"
+                name="關聯科目設定"
+                res_model="setting.aid.relate"
+                domain="[('company','=','123')]"
+                view_mode="form"/>
+    <record id="setting_aid_relate_form" model="ir.ui.view">
+        <field name="name">關聯科目設定</field>
+        <field name="model">setting.aid.relate</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <notebook>
+                        <page string="其他、營業稅">
+                            <h1>其他、營業稅</h1>
+                            <group col="6" string="其他科目">
+                                <table>
+                                    <tr>
+                                        <td><field name="cash"/></td>
+                                        <td><field name="reciecredit"/></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                                <field name="recietick"/>
+                                <field name="paytick"/>
+
+                                <field name="paycredit"/>
+                                <field name="inctaxam"/>
+                                <field name="selltaxam"/>
+                                <field name="selproptgain"/>
+                                <field name="selproptloss"/>
+                                <field name="oincome"/>
+                                <field name="othloss"/>
+                            </group>
+                            <group col="4" string="營業稅">
+                                <field name="paytaxam"/>
+                                <field name="remtaxam"/>
+                                <field name="btaxam"/>
+                                <field name="restbtaxam"/>
+                                <field name="impaytaxam"/>
+                                <field name="purospaytaxam"/>
+                                <field name="stpaytaxam"/>
+                                <field name="mdpaytaxam"/>
+                            </group>
+                        </page>
+                        <page string="工程/建物成本">
+                            <h1>工程/建物成本</h1>
+                            <group col="6" string="在建工程科目">
+                                <field name="ineconsumtrl"/>
+                                <field name="inederimannu"/>
+                                <field name="ineoutsourcf"/>
+                                <field name="inenginrstartf"/>
+                                <field name="inenginrendf"/>
+                                <field name="ineadvsengnrf"/>
+                            </group>
+                            <group col="6" string="其他科目">
+                                <field name="otaccengnrf"/>
+                                <field name="otadvsengnrf"/>
+                                <field name="otengnrproflos"/>
+                                <field name="otengnrproincm"/>
+                                <field name="otengnrprocost"/>
+                                <field name="otrealintre"/>
+                            </group>
+                            <group col="4" string="建物科目">
+                                <field name="bsbiuldplace"/>
+                                <field name="bs4selland"/>
+                                <field name="bsinbilplace"/>
+                                <field name="bs4selhouse"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>

@@ -9,10 +9,10 @@
                   action="setting_aid_company"/>
             <menuitem id="setting_aid_taxm" name="稅報資料維護" parent="setting_aid"
                   action="setting_aid_tax"></menuitem>
-            <!--<menuitem id="setting_aid_supply" name="供應商維護" parent="setting_aid"-->
-                  <!--action="setting_customer"></menuitem>-->
-            <!--<menuitem id="setting_aid_relate" name="關聯科目設定" parent="setting_aid"-->
-                  <!--action="setting_customer"></menuitem>-->
+            <menuitem id="setting_aid_supplym" name="供應商維護" parent="setting_aid"
+                  action="setting_aid_supply"></menuitem>
+            <menuitem id="setting_aid_relatem" name="關聯科目設定" parent="setting_aid"
+                  action="setting_aid_relate"></menuitem>
             <!--<menuitem id="setting_aid_shareclass" name="共用分錄類別維護" parent="setting_aid"-->
                   <!--action="setting_customer"></menuitem>-->
             <!--<menuitem id="setting_aid_accountperson" name="帳簿處理員維護" parent="setting_aid"-->
