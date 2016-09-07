@@ -15,17 +15,17 @@
                         <page string="其他、營業稅">
                             <h1>其他、營業稅</h1>
                             <group col="6" string="其他科目">
-                                <field name="cash"/>
-                                <field name="recietick"/>
-                                <field name="paytick"/>
-                                <field name="reciecredit"/>
-                                <field name="paycredit"/>
-                                <field name="inctaxam"/>
-                                <field name="selltaxam"/>
-                                <field name="selproptgain"/>
-                                <field name="selproptloss"/>
-                                <field name="oincome"/>
-                                <field name="othloss"/>
+                                    <field name="cash"/>
+                                    <field name="recietick"/>
+                                    <field name="paytick"/>
+                                    <field name="reciecredit"/>
+                                    <field name="paycredit"/>
+                                    <field name="inctaxam"/>
+                                    <field name="selltaxam"/>
+                                    <field name="selproptgain"/>
+                                    <field name="selproptloss"/>
+                                    <field name="oincome"/>
+                                    <field name="othloss"/>
                             </group>
                             <group col="4" string="營業稅">
                                 <field name="paytaxam"/>
