@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_aid_supply"
+                name="供應商維護"
+                res_model="setting.aid.supply"
+                view_mode="form"/>
+    <record id="setting_aid_supply_form" model="ir.ui.view">
+        <field name="name">setting_aid_supply_form</field>
+        <field name="model">setting.aid.supply</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>供應商維護</h1>
+                    <group col="4">
+                        <group colspan="4" col="6">
+                            <field name="num"/>
+                            <field name="kind"/>
+                            <field name="abbreviation"/>
+                            <field name="unifid"/>
+                            <field name="taxnation"/>
+                            <field name="personid"/>
+                        </group>
+                        <group colspan="4" col="2">
+                            <field name="companyname"/>
+                            <field name="receiptadd"/>
+                            <field name="caddress"/>
+                        </group>
+                        <group colspan="4" col="6">
+                            <field name="tele"/>
+                            <field name="prokind"/>
+                            <field name="faxdacode"/>
+                            <field name="faxone"/>
+                            <field name="faxtow"/>
+                        </group>
+                        <group colspan="4" col="6" string="主要聯絡人">
+                            <field name="mainctname"/>
+                            <field name="mainctjob"/>
+                            <field name="maincttel"/>
+                            <field name="mainctcel"/>
+                            <field name="mainctmail"/>
+                        </group>
+                        <group colspan="4" col="6" string="代理聯絡人">
+                            <field name="agctname"/>
+                            <field name="agctjob"/>
+                            <field name="agcttel"/>
+                            <field name="agctcel"/>
+                            <field name="agctmail"/>
+                        </group>
+                        <group colspan="4" col="6" string="負責人">
+                            <field name="pcpname"/>
+                            <field name="pcpbirth"/>
+                            <field name="pcptel"/>
+                            <field name="pcpcel"/>
+                            <field name="pcpmail"/>
+                        </group>
+                        <br></br>
+                        <group colspan="4" col="6">
+                            <field name="lastreciev"/>
+                            <field name="lastpay"/>
+                            <field name="noteposi"/>
+                            <field name="creatdate"/>
+                            <field name="modifydate"/>
+                            <field name="updater"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>
