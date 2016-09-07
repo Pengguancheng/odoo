@@ -7,6 +7,9 @@
     'description': """
 
     """,
+    'depends': [
+        'base_setup',
+    ],
     'data': [
                 "views/setting_aid_company.xml",
                 "views/menu.xml",

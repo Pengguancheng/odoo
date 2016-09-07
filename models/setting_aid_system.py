@@ -1,8 +1,17 @@
 # coding=utf-8
-from openerp import models, fields, api
+import time
+import datetime
+from dateutil.relativedelta import relativedelta
 
-class setting_aid_system(models.Model):
+import openerp
+from openerp import SUPERUSER_ID
+from openerp.tools import DEFAULT_SERVER_DATE_FORMAT as DF
+from openerp import api, fields, models, _
+from openerp.exceptions import UserError
+
+class setting_aid_system(models.TransientModel):
     _name = 'setting.aid.system'
+    _inherit = 'res.config.settings'
 
     summons = fields.Selection(
         [('day','月日流水號'),('month','月流水號'),('year','流水號'),('free','自行輸入')
