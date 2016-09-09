@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="setting_aid_accountperson" model="ir.actions.act_window">
+            <field name="name">帳簿處理員維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.aid.accountperson</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="setting_aid_accountperson_tree" model="ir.ui.view">
+            <field name="name">帳簿處理員維護</field>
+            <field name="model">setting.aid.accountperson</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pcode"/>
+                    <field name="pname"/>
+                </tree>
+            </field>
+        </record>
+        <record id="setting_aid_accountperson_form" model="ir.ui.view">
+            <field name="name">帳簿處理員維護</field>
+            <field name="model">setting.aid.accountperson</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>帳簿處理員</h1>
+                        <group col="4">
+                            <field name="pcode"/>
+                            <field name="mediacode"/>
+                            <field name="pname"/>
+                            <field name="pid"/>
+                            <field name="pidtag"/>
+                            <field name="pkind"/>
+                            <field name="email" colspan="4"/>
+                        </group>
+                        <group string="證書代號" col="6">
+                            <field name="proofcodeyear"/>
+                            <field name="proofcodeword"/>
+                            <field name="proofcodenum"/>
+                            <field name="proofcode" colspan="6"/>
+                            <field name="area"/>
+                            <field name="fsc"/>
+                        </group>
+                        <group string="事務所" col="6">
+                            <field name="officename"/>
+                            <field name="standerdid"/>
+                            <field name="withhold"/>
+                            <field name="address" colspan="6"/>
+                            <field name="zipcode"/>
+                            <field name="telephone"/>
+                            <field name="fox"/>
+                        </group>
+                        <group col="4" string="核准登入文號">
+                            <field name="logincodeword" />
+                            <field name="logincodenum"/>
+                        </group>
+                        <group col="4" string="記帳士">
+                            <field name="persontele" />
+                            <field name="personteleclass"/>
+                            <field name="pguildname"/>
+                            <field name="pguildid"/>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

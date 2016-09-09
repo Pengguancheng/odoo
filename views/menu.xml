@@ -15,8 +15,8 @@
                   action="setting_aid_relate"/>
             <menuitem id="setting_aid_shareclassm" name="共用分錄類別維護" parent="setting_aid"
                   action="setting_aid_shareclass"/>
-            <!--<menuitem id="setting_aid_accountperson" name="帳簿處理員維護" parent="setting_aid"-->
-                  <!--action="setting_customer"></menuitem>-->
+            <menuitem id="setting_aid_accountpersonm" name="帳簿處理員維護" parent="setting_aid"
+                  action="setting_aid_accountperson"/>
             <!--<menuitem id="setting_aid_engineering" name="工程維護" parent="setting_aid"-->
                   <!--action="setting_customer"></menuitem>-->
         <!--<menuitem id="setting_reference" name="參考資料" parent="setting"></menuitem>-->
