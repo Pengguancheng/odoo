@@ -12,13 +12,13 @@
     ],
     'data': [
                 "views/setting_aid_company.xml",
-                "views/menu.xml",
                 "views/setting_aid_system.xml",
                 "views/setting_aid_tax.xml",
                 "views/setting_aid_supply.xml",
                 "views/setting_aid_relate.xml",
                 "views/setting_aid_shareclass.xml",
-                "views/setting_aid_accountperson.xml"
+                "views/setting_aid_accountperson.xml",
+                "views/menu.xml"
             ],
     'demo': [],
     'application': True,

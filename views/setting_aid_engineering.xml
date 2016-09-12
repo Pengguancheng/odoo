@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="setting_aid_engineering" model="ir.actions.act_window">
+            <field name="name">工程維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.aid.engineering</field>
+            <field name="view_mode">form</field>
+        </record>
+        <!--<record id="setting_aid_engineering_tree" model="ir.ui.view">-->
+            <!--<field name="name">工程維護</field>-->
+            <!--<field name="model">setting.aid.engineering</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree>-->
+
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+        <record id="setting_aid_engineering_form" model="ir.ui.view">
+            <field name="name">工程維護</field>
+            <field name="model">setting.aid.engineering</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>工程維護</h1>
+                        <group col="4">
+                            <field name="egnid"/>
+                            <field name="egnsname"/>
+                            <field name="egnname"/>
+                        </group>
+                        <notebook>
+                            <page string="基本資料">
+
+                            </page>
+                            <page string="收入/費用">
+
+                            </page>
+                            <page string="建物">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
