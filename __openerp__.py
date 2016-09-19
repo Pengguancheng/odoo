@@ -17,6 +17,7 @@
                 "views/setting_aid_supply.xml",
                 "views/setting_aid_relate.xml",
                 "views/setting_aid_shareclass.xml",
+                "views/setting_aid_systemall.xml",
                 "views/setting_aid_accountperson.xml",
                 "views/menu.xml"
             ],

@@ -5,7 +5,7 @@
         <menuitem id="setting_aid" name="輔助設定" parent="setting"/>
             <menuitem id="setting_aid_companym" name="公司基本維護" parent="setting_aid"
                   action="setting_aid_company"/>
-            <menuitem id="setting_aid_systemm" name="系統設定" parent="setting_aid"
+            <menuitem id="setting_aid_systemm" name="用戶系統設定" parent="setting_aid"
                   action="setting_aid_system" sequence="1"/>
             <menuitem id="setting_aid_taxm" name="稅報資料維護" parent="setting_aid"
                   action="setting_aid_tax"/>
@@ -15,6 +15,8 @@
                   action="setting_aid_relate"/>
             <menuitem id="setting_aid_shareclassm" name="共用分錄類別維護" parent="setting_aid"
                   action="setting_aid_shareclass"/>
+            <menuitem id="setting_aid_systemallm" name="系統設定" parent="setting_aid"
+                  action="setting_aid_systemall"/>
             <menuitem id="setting_aid_accountpersonm" name="帳簿處理員維護" parent="setting_aid"
                   action="setting_aid_accountperson"/>
             <!--<menuitem id="setting_aid_engineering" name="工程維護" parent="setting_aid"-->

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_aid_systemall"
+                name="系統設定"
+                res_model="setting.aid.systemall"
+                view_mode="form"/>
+    <record id="setting_aid_systemall_form" model="ir.ui.view">
+        <field name="name">setting_aid_systemall_form</field>
+        <field name="model">setting.aid.systemall</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>系統設定</h1>
+                    <group col="4">
+                        <group colspan="4" col="4">
+                            <field name="summons"/>
+                            <field name="summonscode"/>
+                            <field name="buysell"/>
+                            <field name="buysellcode"/>
+                            <field name="consumables"/>
+                            <field name="consumablescode"/>
+                            <field name="openaccount"/>
+                            <field name="openaccountcode"/>
+                            <field name="purchasorder"/>
+                            <field name="purchasordercode"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="其他設定">
+                            <group col="6">
+                                <field name="numclass"/>
+                                <field name="numclass"/>
+                                <field name="buyseleqsum"/>
+                                <field name="syncwcpa"/>
+                                <field name="beewarn"/>
+                                <field name="beecard"/>
+                                <field name="addfast"/>
+                                <field name="negred"/>
+                                <field name="county"/>
+                                <field name="screenfont"/>
+                                <field name="reportfont"/>
+                                <field name="windozoom"/>
+                            </group>
+                        </page>
+                        <page string="傳真、預覽">
+                            <group col="4" string="傳真設定">
+                                <field name="outsidenum"/>
+                                <field name="busyreplay"/>
+                                <field name="busywait"/>
+                                <field name="areanum"/>
+                            </group>
+                            <group col="4" string="一般報表預覽方式">
+                                <field name="Multiple"/>
+                                <field name="single"/>
+                            </group>
+                        </page>
+                        <page string="Mail設定">
+                            <group col="6">
+                                <field name="custom"/>
+                                <field name="gmail"/>
+                                <field name="hotmail"/>
+                            </group>
+                            <group col="2">
+                                <field name="email"/>
+                            </group>
+                            <group col="4">
+                                <field name="mserversmtp"/>
+                                <field name="port"/>
+                                <field name="mserveracct"/>
+                                <field name="code"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <group col="6">
+                        <group colspan="6" col="4">
+                            <field name="powonnumlockon"/>
+                            <field name="tabopen"/>
+                        </group>
+                        <group col="6">
+                            <field name="creatdate"/>
+                            <field name="editdate"/>
+                            <field name="updater"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>
