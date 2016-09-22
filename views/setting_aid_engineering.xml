@@ -6,17 +6,9 @@
             <field name="name">工程維護</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">setting.aid.engineering</field>
-            <field name="view_mode">form</field>
+            <field name="view_mode">tree,form</field>
         </record>
-        <!--<record id="setting_aid_engineering_tree" model="ir.ui.view">-->
-            <!--<field name="name">工程維護</field>-->
-            <!--<field name="model">setting.aid.engineering</field>-->
-            <!--<field name="arch" type="xml">-->
-                <!--<tree>-->
 
-                <!--</tree>-->
-            <!--</field>-->
-        <!--</record>-->
         <record id="setting_aid_engineering_form" model="ir.ui.view">
             <field name="name">工程維護</field>
             <field name="model">setting.aid.engineering</field>
@@ -31,19 +23,139 @@
                         </group>
                         <notebook>
                             <page string="基本資料">
-
+                                <group col="4">
+                                    <group colspan="4" col="4">
+                                        <field name="egnlocation"/>
+                                        <field name="cid"/>
+                                        <field name="address"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="organizer"/>
+                                        <field name="dealdate"/>
+                                        <field name="dealend"/>
+                                        <field name="realstart"/>
+                                        <field name="realend"/>
+                                        <field name="chkdate"/>
+                                        <field name="startdate"/>
+                                        <field name="enddate"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="costmeth"/>
+                                        <field name="earlywork"/>
+                                        <field name="nowwork"/>
+                                        <field name="tag"/>
+                                        <field name="sitemoneystanderd"/>
+                                        <field name="coststanderd"/>
+                                        <field name="costrate"/>
+                                        <field name="delayrate"/>
+                                    </group>
+                                </group>
                             </page>
                             <page string="收入/費用">
+                                <group col="6">
+                                    <group colspan="2" col="2" string="合約">
+                                        <field name="dealm"/>
+                                        <field name="discountm"/>
+                                        <field name="earlyaddm"/>
+                                        <field name="nowaddm"/>
+                                        <field name="chkm"/>
+                                    </group>
+                                    <group colspan="4" col="4" string="工程收入">
+                                        <field name="advanceme"/>
+                                        <field name="advancemn"/>
+                                        <field name="incomeme"/>
+                                        <field name="incomemn"/>
+                                        <field name="grossme"/>
+                                        <field name="grossmn"/>
+                                        <field name="count1"/>
+                                        <field name="count2"/>
+                                    </group>
+                                    <group string="工程費用" colspan="6">
+                                        <table style="width:100%;">
+                                            <tr>
+                                                <td> </td>
+                                                <td>前期費用</td>
+                                                <td>本期費用</td>
+                                                <td>實際費用</td>
+                                                <td>預算費用</td>
+                                            </tr>
+                                            <tr>
+                                                <td>材料</td>
+                                                <td><field name="material_e"/></td>
+                                                <td><field name="material_n"/></td>
+                                                <td><field name="material_r"/></td>
+                                                <td><field name="material_b"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>人工</td>
+                                                <td><field name="people_e"/></td>
+                                                <td><field name="people_n"/></td>
+                                                <td><field name="people_r"/></td>
+                                                <td><field name="people_b"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>工程</td>
+                                                <td><field name="engineering_e"/></td>
+                                                <td><field name="engineering_n"/></td>
+                                                <td><field name="engineering_r"/></td>
+                                                <td><field name="engineering_b"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>外包</td>
+                                                <td><field name="Outsourcing_e"/></td>
+                                                <td><field name="Outsourcing_n"/></td>
+                                                <td><field name="Outsourcing_r"/></td>
+                                                <td><field name="Outsourcing_b"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>合計</td>
+                                                <td><field name="total_e"/></td>
+                                                <td><field name="total_n"/></td>
+                                                <td><field name="total_r"/></td>
+                                                <td><field name="total_b"/></td>
+                                            </tr>
 
+                                        </table>
+                                    </group>
+                                </group>
                             </page>
                             <page string="建物">
-
+                                <group col="4">
+                                    <field name="householdnum" string="總戶數（如為建案請輸入房屋總戶數）"/>
+                                    <field name="parkingnum"/>
+                                    <field name="hassessment"/>
+                                    <field name="constructionm"/>
+                                    <group colspan="2" col="2">
+                                        <field name="landcost"/>
+                                        <field name="landarea"/>
+                                        <field name="landgcost"/>
+                                        <field name="landgarea"/>
+                                        <field name="m2cost"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="housetcost"/>
+                                        <field name="floorspace"/>
+                                        <field name="spacecost"/>
+                                        <field name="m2space"/>
+                                        <field name="m2spacecost"/>
+                                    </group>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
-
+        <record id="setting_aid_engineering_tree" model="ir.ui.view">
+            <field name="name">工程維護</field>
+            <field name="model">setting.aid.engineering</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="egnid"/>
+                    <field name="egnsname"/>
+                    <field name="egnname"/>
+                </tree>
+            </field>
+        </record>
     </data>
 </openerp>

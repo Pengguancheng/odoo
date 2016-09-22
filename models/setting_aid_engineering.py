@@ -18,7 +18,7 @@ class setting_aid_engineering(models.Model):
     chkdate = fields.Date('驗收日期')
     startdate = fields.Date('施工期間(起)')
     enddate = fields.Date('施工期間(迄)')
-    costmeth = fields.Selection(['1','全部完工'],['0','完工比例'])
+    costmeth = fields.Selection([('1','全部完工'),('0','完工比例')],'成本法')
     earlywork = fields.Float('前期完工度', readonly=True)
     nowwork = fields.Float('本期完工度', readonly=True)
     tag = fields.Char('備註')
@@ -28,10 +28,11 @@ class setting_aid_engineering(models.Model):
     delayrate = fields.Float('遞延費用轉列比例')
     #收入費用
     dealm = fields.Integer('合約金額')
-    discountm = fields.Integer('折讓金額')
-    earlyaddm = fields.Integer('前期追加')
-    nowaddm = fields.Integer('本期追加')
-    chkm = fields.Integer('驗收金額', readonly=True, compute="_chkm", store=True)
+    discountm = fields.Integer('-折讓金額')
+    earlyaddm = fields.Integer('+前期追加')
+    nowaddm = fields.Integer('+本期追加')
+    chkm = fields.Integer(string='=驗收金額', compute='_chkm_onchange')
+    chkmr = fields.Integer('驗收金額')
     advanceme = fields.Integer('前期預收金額', readonly=True)
     advancemn = fields.Integer('本期預收金額', readonly=True)
     incomeme = fields.Integer('前期收入金額', readonly=True)
@@ -40,7 +41,6 @@ class setting_aid_engineering(models.Model):
     grossmn = fields.Integer('本期毛利金額', readonly=True)
     count1 = fields.Integer('合約金額-收入金額', readonly=True)
     count2 = fields.Integer('驗收金額-收入金額', readonly=True)
-    nowaddm = fields.Integer('本期追加')
     #工程費用
     #材料
     material_e = fields.Integer('材料前期費用', readonly=True)
@@ -67,5 +67,35 @@ class setting_aid_engineering(models.Model):
     total_n = fields.Integer('合計本期費用', readonly=True)
     total_r = fields.Integer('合計實際費用', readonly=True)
     total_b = fields.Integer('合計預算費用', readonly=True)
-    def _chkm(self):
+    #建物
+    householdnum = fields.Integer('總戶數')
+    parkingnum = fields.Integer('車位數')
+    hassessment = fields.Selection([('1','收入法'),('2','建坪比例法'),('3','建屋方式')],'房屋估價方法')
+    constructionm = fields.Selection([('0','自地自建'),('1','合建分屋'),('2','合建分售'),('3','合建分成'),('4','共同投資興建')],'建屋方式')
+    landcost = fields.Integer('土地總成本')
+    landarea = fields.Integer('/土地面積')
+    landgcost = fields.Integer('=每坪成本')
+    landgarea = fields.Integer('/面積（㎡）')
+    m2cost = fields.Integer('=每㎡成本')
+    housetcost = fields.Integer('房屋總成本')
+    floorspace = fields.Integer('/總建坪')
+    spacecost = fields.Integer('=每坪成本')
+    m2space = fields.Integer('/面積（㎡）')
+    m2spacecost = fields.Integer('=每㎡成本')\
+
+    @api.onchange('dealm','discountm','earlyaddm','nowaddm')
+    def _chkm_onchange(self):
         self.chkm = self.dealm - self.discountm +self.earlyaddm +self.nowaddm
+        self.chkmr = self.chkm
+    @api.onchange('landcost','landarea')
+    def _land_change1(self):
+        self.landgcost = self.landcost / self.landarea
+    @api.onchange('landcost','landgarea')
+    def _land_change(self):
+        self.m2cost = self.landcost / self.landgarea
+    @api.onchange('housetcost','floorspace')
+    def _house_change(self):
+        self.spacecost = self.housetcost / self.floorspace
+    @api.onchange('housetcost','m2space')
+    def _house_change1(self):
+        self.m2spacecost = self.housetcost / self.m2space
