@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_reference_phrase"
+                name="片語維護"
+                res_model="setting.reference.phrase"
+                view_mode="form"/>
+    <record id="setting_reference_phrase_form" model="ir.ui.view">
+        <field name="name">setting_reference_phrase_form</field>
+        <field name="model">setting.reference.phrase</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>片語維護</h1>
+                    <group col="8">
+                        <group colspan="8" col="2">
+                            <field name="phrasecode"/>
+                            <field name="phrasename"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>

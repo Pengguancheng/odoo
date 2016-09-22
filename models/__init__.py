@@ -6,3 +6,4 @@ import setting_aid_relate
 import setting_aid_shareclass
 import setting_aid_systemall
 import setting_aid_accountperson
+import setting_reference_phrase
