@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="setting_reference_bank" model="ir.actions.act_window">
+            <field name="name">全國銀行維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.reference.bank</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="setting_reference_bank_tree" model="ir.ui.view">
+            <field name="name">全國銀行維護</field>
+            <field name="model">setting.reference.bank</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="bankcode"/>
+                    <field name="bankacroname"/>
+                </tree>
+            </field>
+        </record>
+        <record id="setting_reference_bank_form" model="ir.ui.view">
+        <field name="name">setting_reference_bank_form</field>
+        <field name="model">setting.reference.bank</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>全國銀行維護</h1>
+                    <group col="2">
+                        <field name="bankcode"/>
+                        <field name="bankacroname"/>
+                        <field name="bankfullname"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    </data>
+</openerp>

@@ -19,8 +19,13 @@
                   action="setting_aid_systemall"/>
             <menuitem id="setting_aid_accountpersonm" name="帳簿處理員維護" parent="setting_aid"
                   action="setting_aid_accountperson"/>
-            <menuitem id="setting_aid_engineeringm" name="工程維護" parent="setting_aid"
-                  action="setting_aid_engineering"></menuitem>
+            <menuitem id="setting_aid_engineering" name="工程維護" parent="setting_aid"
+                  action="setting_customer"></menuitem>
+        <menuitem id="setting_reference" name="參考資料" parent="setting"/>
+            <menuitem id="setting_reference_phrasem" name="片語維護" parent="setting_reference"
+                  action="setting_reference_phrase"></menuitem>
+            <menuitem id="setting_reference_bankm" name="全國銀行維護" parent="setting_reference"
+                  action="setting_reference_bank"></menuitem>
         <!--<menuitem id="setting_reference" name="參考資料" parent="setting"></menuitem>-->
             <!--<menuitem id="setting_reference_phrase" name="片語維護" parent="setting_reference"-->
                   <!--action="setting_customer"></menuitem>-->
