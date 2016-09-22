@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <act_window id="setting_reference_phrase"
-                name="片語維護"
-                res_model="setting.reference.phrase"
-                view_mode="form"/>
-    <record id="setting_reference_phrase_form" model="ir.ui.view">
+    <data>
+        <record id="setting_reference_phrase" model="ir.actions.act_window">
+            <field name="name">片語維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.reference.phrase</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="setting_reference_phrase_tree" model="ir.ui.view">
+            <field name="name">片語維護</field>
+            <field name="model">setting.reference.phrase</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="phrasecode"/>
+                    <field name="phrasename"/>
+                </tree>
+            </field>
+        </record>
+        <record id="setting_reference_phrase_form" model="ir.ui.view">
         <field name="name">setting_reference_phrase_form</field>
         <field name="model">setting.reference.phrase</field>
         <field name="arch" type="xml">
@@ -21,4 +34,5 @@
             </form>
         </field>
     </record>
+    </data>
 </openerp>

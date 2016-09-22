@@ -20,6 +20,7 @@
                 "views/setting_aid_systemall.xml",
                 "views/setting_aid_accountperson.xml",
                 "views/setting_reference_phrase.xml",
+                "views/setting_reference_bank.xml",
                 "views/menu.xml"
             ],
     'demo': [],
