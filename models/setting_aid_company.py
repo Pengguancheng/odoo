@@ -82,7 +82,7 @@ class setting_aid_customer(models.TransientModel):
     industrystandardexpensesrate = fields.Integer('同業標準費用率')
     #備註說明
     remarktag = fields.Html('備註說明')
-    companyread = fields.Char(' ', compute="_onchange_company")
+    companyread = fields.Char('公司代號', compute="_onchange_company")
 
     @api.onchange('company')
     def _onchange_company(self):

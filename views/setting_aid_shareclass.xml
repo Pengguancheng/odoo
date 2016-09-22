@@ -3,7 +3,7 @@
     <act_window id="setting_aid_shareclass"
                 name="共用分錄類別維護"
                 res_model="setting.aid.shareclass"
-                view_mode="form"/>
+                view_mode="tree,form"/>
     <record id="setting_aid_shareclass_form" model="ir.ui.view">
         <field name="name">關聯科目設定</field>
         <field name="model">setting.aid.shareclass</field>
@@ -38,6 +38,16 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+    <record id="setting_aid_shareclass_tree" model="ir.ui.view">
+        <field name="name">關聯科目設定</field>
+        <field name="model">setting.aid.shareclass</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="classnum"/>
+                <field name="entclass"/>
+            </tree>
         </field>
     </record>
 </openerp>
