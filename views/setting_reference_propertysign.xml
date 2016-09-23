@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="setting_reference_propertysign" model="ir.actions.act_window">
+            <field name="name">結算科目維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.reference.propertysign</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="setting_reference_propertysign_tree" model="ir.ui.view">
+            <field name="name">結算科目維護</field>
+            <field name="model">setting.reference.propertysign</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="accountcode"/>
+                    <field name="accountname"/>
+                </tree>
+            </field>
+        </record>
+        <record id="setting_reference_propertysign_form" model="ir.ui.view">
+        <field name="name">結算科目維護</field>
+        <field name="model">setting.reference.propertysign</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>結算科目維護</h1>
+                    <group>
+                        <group col="4">
+                            <field name="accountcode"/>
+                            <field name="lend"/>
+                            <field name="accountname"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    </data>
+</openerp>
