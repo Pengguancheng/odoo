@@ -31,11 +31,12 @@
             <menuitem id="setting_reference_taxofficalm" name="國稅稽徵機關維護" parent="setting_reference"
                   action="setting_reference_taxoffical"/>
             <menuitem id="setting_reference_settlementm" name="結算科目維護" parent="setting_reference"
+                  action="setting_reference_settlement"></menuitem>
+            <menuitem id="setting_reference_certificatem" name="憑證種類維護" parent="setting_reference"
+                  action="setting_reference_certificate"></menuitem>
                   action="setting_reference_settlement"/>
             <menuitem id="setting_reference_propertysignm" name="財簽科目維護" parent="setting_reference"
                   action="setting_reference_propertysign"/>
-            <!--<menuitem id="setting_reference_certificate" name="憑證種類維護" parent="setting_reference"-->
-                  <!--action="setting_customer"></menuitem>-->
             <!--<menuitem id="setting_reference_holiday" name="國定假日設定" parent="setting_reference"-->
                   <!--action="setting_customer"></menuitem>-->
         <!--<menuitem id="setting_moveprocess" name="異動處理" parent="setting"></menuitem>-->
