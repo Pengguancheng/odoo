@@ -26,10 +26,10 @@
                   action="setting_reference_phrase"/>
             <menuitem id="setting_reference_bankm" name="全國銀行維護" parent="setting_reference"
                   action="setting_reference_bank"/>
+            <menuitem id="setting_reference_standerdclassm" name="標準分錄類別維護" parent="setting_reference"
+                  action="setting_reference_standerdclass"></menuitem>
             <menuitem id="setting_reference_taxofficalm" name="國稅稽徵機關維護" parent="setting_reference"
                   action="setting_reference_taxoffical"/>
-            <!--<menuitem id="setting_reference_standerdclass" name="標準分錄類別維護" parent="setting_reference"-->
-                  <!--action="setting_customer"></menuitem>-->
             <menuitem id="setting_reference_settlementm" name="結算科目維護" parent="setting_reference"
                   action="setting_reference_settlement"></menuitem>
             <!--<menuitem id="setting_reference_propertysign" name="財簽科目維護" parent="setting_reference"-->

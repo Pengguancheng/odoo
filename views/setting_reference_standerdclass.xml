@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="setting_reference_standerdclass" model="ir.actions.act_window">
+            <field name="name">標準分錄類別維護</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.reference.standerdclass</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="setting_reference_standerdclass_tree" model="ir.ui.view">
+            <field name="name">標準分錄類別維護</field>
+            <field name="model">setting.reference.standerdclass</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="subject"/>
+                    <field name="classcode"/>
+                    <field name="entrycate"/>
+                </tree>
+            </field>
+        </record>
+        <record id="setting_reference_standerdclass_form" model="ir.ui.view">
+            <field name="name">標準分錄類別維護</field>
+            <field name="model">setting.reference.standerdclass</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>標準分錄類別維護</h1>
+                        <group col="2">
+                            <group colspan="2" col="6">
+                                <field name="subject"/>
+                                <field name="classcode"/>
+                                <field name="entrycate"/>
+                            </group>
+                            <group colspan="2" col="4">
+                                <field name="debittran"/>
+                                <field name="debitclass"/>
+                            </group>
+                            <field name="debitcont"/>
+                            <group colspan="2" col="4">
+                                <field name="credittran"/>
+                                <field name="creditclass"/>
+                            </group>
+                            <field name="creditcont"/>
+                            <group colspan="2" col="4">
+                                <field name="taxsubject"/>
+                                <field name="taxclass"/>
+                            </group>
+                            <field name="taxcont"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

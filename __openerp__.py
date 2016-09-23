@@ -24,6 +24,7 @@
                 "views/setting_aid_engineering.xml",
                 "views/setting_reference_taxoffical.xml",
                 "views/setting_reference_settlement.xml",
+                "views/setting_reference_standerdclass.xml",
                 "views/menu.xml"
             ],
     'demo': [],
