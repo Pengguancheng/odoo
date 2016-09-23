@@ -4,6 +4,5 @@ from openerp import models, fields, api
 class setting_reference_taxoffical(models.Model):
     _name = 'setting.reference.taxoffical'
 
-    accountcode = fields.Char('科目代號')
-    accountname = fields.Char('科目名稱')
-    lend = fields.Selection([],'借/貸')
+    taxauthoritycode = fields.Char('國稅稽徵機關代號')
+    taxauthorityname = fields.Char('國稅稽徵機關名稱')

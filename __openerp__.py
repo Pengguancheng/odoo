@@ -22,6 +22,8 @@
                 "views/setting_reference_phrase.xml",
                 "views/setting_reference_bank.xml",
                 "views/setting_aid_engineering.xml",
+                "views/setting_reference_taxoffical.xml",
+                "views/setting_reference_settlement.xml",
                 "views/menu.xml"
             ],
     'demo': [],
