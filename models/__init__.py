@@ -12,3 +12,4 @@ import setting_aid_engineering
 import setting_reference_taxoffical
 import setting_reference_settlement
 import setting_reference_propertysign
+import setting_reference_standerdclass

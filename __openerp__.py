@@ -25,6 +25,7 @@
             "views/setting_reference_taxoffical.xml",
             "views/setting_reference_settlement.xml",
             "views/setting_reference_propertysign.xml",
+            "views/setting_reference_standerdclass.xml",
             "views/menu.xml"
             ],
     'demo': [],
