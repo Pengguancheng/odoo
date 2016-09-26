@@ -14,3 +14,5 @@ import setting_reference_settlement
 import setting_reference_propertysign
 import setting_reference_standerdclass
 import setting_reference_certificate
+import setting_moveprocess_receivemailid
+import setting_moveprocess_annualdatachange

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_moveprocess_annualdatachange"
+                name="資料年度轉換作業"
+                res_model="setting.moveprocess.annualdatachange"
+                view_mode="form"/>
+    <record id="setting_moveprocess_annualdatachange_form" model="ir.ui.view">
+        <field name="name">setting_moveprocess_annualdatachange_form</field>
+        <field name="model">setting.moveprocess.annualdatachange</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>資料年度轉換作業</h1>
+                    <p>作業目的：將 A 年度資料結轉至 B 年度</p>   <!--A,B是可以變動的-->
+                    <group col="4">
+                        <group colspan="4" col="2" string="年結方式">
+                            <field name="compyearcover"/>
+                            <field name="compyearuncover"/>
+                            <field name="newyear"/>
+                        </group>
+                        <br></br>
+                        <group colspan="4" col="4">
+                            <field name="dclrto0bsmrg"/>
+                            <field name="endstockto0"/>
+                            <field name="chekticktrenew"/>
+                            <field name="findatacarry"/>
+                            <field name="caryBfinenginum"/>
+                            <field name="delAfinenginum"/>
+                            <field name="cmltgandl"/>
+                        </group>
+                        <group colspan="4" col="6" string="檔案類別">
+                            <field name="pubsetfile"/>
+                            <field name="pubdatafile"/>
+                            <field name="ldgrdatafile"/>
+                            <field name="proptdatafile"/>
+                            <field name="engcostdatafile"/>
+                            <field name="paydatafile"/>
+                            <field name="towtaxtonedtfile"/>
+                            <field name="stlmdclrdtfile"/>
+                            <field name="banktickdtfile"/>
+                            <field name="estiexamfile"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>
