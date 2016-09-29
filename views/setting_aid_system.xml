@@ -20,21 +20,21 @@
                     <sheet>
                         <h1>用戶系統設定</h1>
                         <group col="4">
-                            <field name="summons"/>
-                            <field name="summonsname"/>
-                            <field name="buysell"/>
-                            <field name="buysellname"/>
-                            <field name="consumables"/>
-                            <field name="consumablesname"/>
-                            <field name="openaccount"/>
-                            <field name="openaccountname"/>
+                            <field name="default_summons"/>
+                            <field name="default_summonsname"/>
+                            <field name="default_buysell"/>
+                            <field name="default_buysellname"/>
+                            <field name="default_consumables"/>
+                            <field name="default_consumablesname"/>
+                            <field name="default_openaccount"/>
+                            <field name="default_openaccountname"/>
                         </group>
                         <group col="6">
-                            <field name="classinform"/>
-                            <field name="address"/>
-                            <field name="aummonsasbuysell"/>
-                            <field name="yearinform"/>
-                            <field name="defaultaddress" colspan="4"/>
+                            <field name="default_classinform"/>
+                            <field name="default_address"/>
+                            <field name="default_aummonsasbuysell"/>
+                            <field name="default_yearinform"/>
+                            <field name="default_defaultaddress" colspan="4"/>
                         </group>
                     </sheet>
                 </form>

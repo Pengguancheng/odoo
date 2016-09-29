@@ -3,7 +3,18 @@
     <act_window id="setting_aid_supply"
                 name="供應商維護"
                 res_model="setting.aid.supply"
-                view_mode="form"/>
+                view_mode="tree,form"/>
+    <record id="setting_aid_supply_tree" model="ir.ui.view">
+        <field name="name">供應商維護</field>
+        <field name="model">setting.aid.supply</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="num"/>
+                <field name="companyname"/>
+                <field name="kind" string="類別"/>
+            </tree>
+        </field>
+    </record>
     <record id="setting_aid_supply_form" model="ir.ui.view">
         <field name="name">setting_aid_supply_form</field>
         <field name="model">setting.aid.supply</field>
