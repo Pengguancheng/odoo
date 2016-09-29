@@ -27,6 +27,8 @@
             "views/setting_reference_propertysign.xml",
             "views/setting_reference_standerdclass.xml",
             "views/setting_reference_certificate.xml",
+            "views/setting_moveprocess_receivemailid.xml",
+            "views/setting_moveprocess_annualdatachange.xml",
             "views/menu.xml"
             ],
     'demo': [],

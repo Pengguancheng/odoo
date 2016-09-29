@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 from openerp import models, fields, api
 
-class setting_aid_tax(models.Model):
+class setting_reference_standerdclass(models.Model):
     _name = 'setting.reference.standerdclass'
 
     subject = fields.Selection([('1','1-證期會科目'),('2','2-結算科目'),('1','2-文中標準板')],'科目別')

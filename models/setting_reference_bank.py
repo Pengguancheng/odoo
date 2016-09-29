@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 from openerp import models, fields, api
 
-class setting_aid_tax(models.Model):
+class setting_reference_bank(models.Model):
     _name = 'setting.reference.bank'
 
     bankcode = fields.Char('銀行代號')

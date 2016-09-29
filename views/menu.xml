@@ -27,22 +27,22 @@
             <menuitem id="setting_reference_bankm" name="全國銀行維護" parent="setting_reference"
                   action="setting_reference_bank"/>
             <menuitem id="setting_reference_standerdclassm" name="標準分錄類別維護" parent="setting_reference"
-                  action="setting_reference_standerdclass"/>
+                  action="setting_reference_standerdclass"></menuitem>
             <menuitem id="setting_reference_taxofficalm" name="國稅稽徵機關維護" parent="setting_reference"
                   action="setting_reference_taxoffical"/>
             <menuitem id="setting_reference_settlementm" name="結算科目維護" parent="setting_reference"
-                  action="setting_reference_settlement"/>
+                  action="setting_reference_settlement"></menuitem>
             <menuitem id="setting_reference_certificatem" name="憑證種類維護" parent="setting_reference"
-                  action="setting_reference_certificate"/>
+                  action="setting_reference_certificate"></menuitem>
             <menuitem id="setting_reference_propertysignm" name="財簽科目維護" parent="setting_reference"
                   action="setting_reference_propertysign"/>
             <!--<menuitem id="setting_reference_holiday" name="國定假日設定" parent="setting_reference"-->
                   <!--action="setting_customer"></menuitem>-->
-        <!--<menuitem id="setting_moveprocess" name="異動處理" parent="setting"></menuitem>-->
-            <!--<menuitem id="setting_moveprocess_receivemailid" name="收件編號快速輸入" parent="setting_moveprocess"-->
-                  <!--action="setting_customer"></menuitem>-->
-            <!--<menuitem id="setting_moveprocess_annualdatachange" name="資料年度轉換作業" parent="setting_moveprocess"-->
-                  <!--action="setting_customer"></menuitem>-->
+        <menuitem id="setting_moveprocess" name="異動處理" parent="setting"/>
+            <menuitem id="setting_moveprocess_receivemailidm" name="收件編號快速輸入" parent="setting_moveprocess"
+                  action="setting_moveprocess_receivemailid"/>
+            <menuitem id="setting_moveprocess_annualdatachangem" name="資料年度轉換作業" parent="setting_moveprocess"
+                  action="setting_moveprocess_annualdatachange"/>
             <!--<menuitem id="setting_moveprocess_companyidchange" name="公司代號修改作業" parent="setting_moveprocess"-->
                   <!--action="setting_customer"></menuitem>-->
             <!--<menuitem id="setting_moveprocess_idchange" name="號碼重編作業" parent="setting_moveprocess"-->

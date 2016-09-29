@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <act_window id="setting_moveprocess_receivemailid"
+                name="收件編號快速輸入"
+                res_model="setting.moveprocess.receivemailid"
+                view_mode="form"/>
+    <record id="setting_moveprocess_receivemailid_form" model="ir.ui.view">
+        <field name="name">setting_moveprocess_receivemailid_form</field>
+        <field name="model">setting.moveprocess.receivemailid</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>收件編號快速輸入</h1>
+                    <group col="4">
+                        <group colspan="4" col="6" string="輸入項目">
+                            <field name="billrecivnum"/>
+                            <field name="temporpaynum"/>
+                            <field name="billtempor"/>
+                            <field name="earndistratio"/>
+                            <field name="notefinote"/>
+                        </group>
+                        <!--下半部會因為輸入項目的選擇而變動，所以沒做-->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</openerp>
