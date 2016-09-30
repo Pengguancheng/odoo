@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-
         <record id="setting_aid_company" model="ir.actions.act_window">
-            <field name="name">記帳客戶維護</field>
+            <field name="name">公司基本維護</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">setting.aid.company</field>
-            <field name="view_mode">form</field>
-            <field name="target">inline</field>
+            <field name="view_mode">tree,form</field>
         </record>
-
+        <record id="setting_aid_company_tree" model="ir.ui.view">
+            <field name="name">公司基本維護</field>
+            <field name="model">setting.aid.company</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="company"/>
+                    <field name="companyname"/>
+                    <field name="principal"/>
+                </tree>
+            </field>
+        </record>
         <record id="setting_aid_company_form" model="ir.ui.view">
-            <field name="name">記帳客戶維護</field>
+            <field name="name">setting_aid_company_form</field>
             <field name="model">setting.aid.company</field>
             <field name="arch" type="xml">
                 <form>
-                    <header>
-                        <button string="Apply" type="object" name="" class="oe_highlight"/>
-                        <button string="Cancel" type="object" name="" class="oe_link"/>
-                    </header>
                     <sheet>
                         <notebook colspan="8">
                             <page string="基本資料">
@@ -134,15 +138,8 @@
                             </page>
                         </notebook>
                     </sheet>
-
                 </form>
             </field>
         </record>
-        <!--<data>-->
-        <!--<menuitem id="project_accounting" name="Project_Accounting" sequence="1"></menuitem>-->
-        <!--<menuitem id="paccounting_setting" name="共同管理" parent="project_accounting"></menuitem>-->
-        <!--<menuitem id="paccounting_serring_billingcustomerset" name="計帳客戶維護" parent="paccounting_setting"-->
-        <!--action="paccounting_main"></menuitem>-->
-        <!--</data>-->
     </data>
 </openerp>

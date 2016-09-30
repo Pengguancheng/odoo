@@ -18,21 +18,21 @@
             </field>
         </record>
         <record id="setting_reference_phrase_form" model="ir.ui.view">
-        <field name="name">setting_reference_phrase_form</field>
-        <field name="model">setting.reference.phrase</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <h1>片語維護</h1>
-                    <group col="8">
-                        <group colspan="8" col="2">
-                            <field name="phrasecode"/>
-                            <field name="phrasename"/>
+            <field name="name">setting_reference_phrase_form</field>
+            <field name="model">setting.reference.phrase</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>片語維護</h1>
+                        <group col="8">
+                            <group colspan="8" col="2">
+                                <field name="phrasecode"/>
+                                <field name="phrasename"/>
+                            </group>
                         </group>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+                    </sheet>
+                </form>
+            </field>
+        </record>
     </data>
 </openerp>

@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <act_window id="setting_aid_tax"
-                name="稅報資料維護"
-                res_model="setting.aid.tax"
-                view_mode="form"/>
-    <record id="setting_aid_tax_form" model="ir.ui.view">
-        <field name="name">setting_aid_tax_form</field>
-        <field name="model">setting.aid.tax</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <h1>用戶稅報資料維護</h1>
-                    <group col="4">
-                        <group colspan="4" col="6">
-                            <field name="pyrecedcap"/>
-                            <field name="tyrecedcap" readonly="1"/>
-                            <field name="divintratio"/>
-                            <field name="cashcapincre"/>
-                            <field name="hrcapincre"/>
-                            <field name="nescucapincre"/>
-                            <field name="othercapincre"/>
-                            <field name="tycapdecre"/>
+    <data>
+        <record id="setting_aid_tax" model="ir.actions.act_window">
+            <field name="name">用戶系統設定</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">setting.aid.tax</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+        <record id="setting_aid_tax_form" model="ir.ui.view">
+            <field name="name">setting_aid_tax_form</field>
+            <field name="model">setting.aid.tax</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <br></br>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <sheet>
+                        <h1>用戶稅報資料維護</h1>
+                        <group col="4">
+                            <group colspan="4" col="6">
+                                <field name="default_pyrecedcap"/>
+                                <field name="default_tyrecedcap" readonly="1"/>
+                                <field name="default_divintratio"/>
+                                <field name="default_cashcapincre"/>
+                                <field name="default_hrcapincre"/>
+                                <field name="default_nescucapincre"/>
+                                <field name="default_othercapincre"/>
+                                <field name="default_tycapdecre"/>
+                            </group>
+                            <group colspan="4" col="6">
+                                <field name="default_leglsupcapincre"/>
+                                <field name="default_capsupcapincre"/>
+                                <field name="default_techpricapincre"/>
+                                <field name="default_elrightdate"/>
+                                <field name="default_elintdate"/>
+                                <field name="default_curvalue"/>
+                                <field name="default_distredyarn"/>
+                                <field name="default_shmetbclsprc"/>
+                            </group>
+                            <group colspan="4" col="4">
+                                <field name="default_shdtaxratlaw"/>
+                                <field name="default_leglsupris"/>
+                            </group>
+                            <group colspan="4" col="4" string="盈餘或員工紅利轉增資">
+                                <field name="default_etdnonslwcls"/>
+                                <field name="default_etdslwcls"/>
+                            </group>
+                            <group colspan="4" col="6" string="章程訂定-%">
+                                <field name="default_regshodiv"/>
+                                <field name="default_regdireward"/>
+                                <field name="default_regstafdiv"/>
+                            </group>
+                            <group colspan="4" col="4" string="增資緩課核備資料">
+                                <field name="default_incapextplaname"/>
+                                <field name="default_incapapdate"/>
+                                <field name="default_incapapnum"/>
+                                <field name="default_incapestfshday"/>
+                            </group>
                         </group>
-                        <group colspan="4" col="6">
-                            <field name="leglsupcapincre"/>
-                            <field name="capsupcapincre"/>
-                            <field name="techpricapincre"/>
-                            <field name="elrightdate"/>
-                            <field name="elintdate"/>
-                            <field name="curvalue"/>
-                            <field name="distredyarn"/>
-                            <field name="shmetbclsprc"/>
-                        </group>
-                        <group colspan="4" col="4">
-                            <field name="shdtaxratlaw"/>
-                            <field name="leglsupris"/>
-                        </group>
-                        <group colspan="4" col="4" string="盈餘或員工紅利轉增資">
-                            <field name="etdnonslwcls"/>
-                            <field name="etdslwcls"/>
-                        </group>
-                        <group colspan="4" col="6" string="章程訂定-%">
-                            <field name="regshodiv"/>
-                            <field name="regdireward"/>
-                            <field name="regstafdiv"/>
-                        </group>
-                        <group colspan="4" col="4" string="增資緩課核備資料">
-                            <field name="incapextplaname"/>
-                            <field name="incapapdate"/>
-                            <field name="incapapnum"/>
-                            <field name="incapestfshday"/>
-                        </group>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
 </openerp>

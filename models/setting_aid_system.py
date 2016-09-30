@@ -1,19 +1,12 @@
 # coding=utf-8
-import time
-import datetime
-from dateutil.relativedelta import relativedelta
-
-import openerp
-from openerp import SUPERUSER_ID
-from openerp.tools import DEFAULT_SERVER_DATE_FORMAT as DF
-from openerp import api, fields, models, _
+from openerp import api, fields, models
 from openerp.exceptions import UserError
 class setting_aid_default(models.Model):
     _name = 'setting.aid.default'
 
     summons = fields.Selection(
         [('day','月日流水號'),('month','月流水號'),('year','流水號'),('free','自行輸入')
-         ,('threenumday','前三碼+月日流水號'),('threemonth','前三碼+月流水號')],string='傳票號碼',default_model ='setting.aid.default')
+         ,('threenumday','前三碼+月日流水號'),('threemonth','前三碼+月流水號')],string='傳票號碼')
     buysell = fields.Selection(
         [('day','月日流水號'),('month','月流水號'),('year','流水號'),('free','自行輸入')
          ,('threenumday','前三碼+月日流水號'),('threemonth','前三碼+月流水號')],string='進銷單號')
